@@ -7,6 +7,7 @@ start-all.sh
 hdfs dfs -mkdir /D
 
 hdfs dfs -chmod 777 /D
+hdfs dfs -chmod 7777 /D
 
 hadoop jar /Users/rahul/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -file /Users/rahul/hadoop-3.3.4/expenditure.py -mapper expenditure.py -file /Users/rahul/hadoop-3.3.4/expenditured.py -reducer expenditured.py -input /Project/expenditure.csv -output /Project/output_expenditure
 
